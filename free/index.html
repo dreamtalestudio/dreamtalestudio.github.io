@@ -3,10 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>قصص الأحلام — شهر مجاني لأول ١٠٠ عائلة</title>
-<meta name="description" content="طفلك بطل حكاية جديدة كل ليلة. شهر مجاني لأول ١٠٠ عائلة.">
-<meta property="og:title" content="DreamTale — a free month for the first 100 families">
+<title>قصص الأحلام — شهر مجاني لفترة محدودة</title>
+<meta name="description" content="طفلك بطل حكاية جديدة كل ليلة. شهر مجاني لفترة محدودة.">
+<meta property="og:title" content="DreamTale — one month free, for a limited time">
 <meta property="og:description" content="Your child is the hero of a new illustrated, narrated bedtime story every night.">
+
+<script>
+  /* ============================================================
+     THE ONLY TWO LINES YOU EVER NEED TO EDIT
+     ------------------------------------------------------------
+     PIXEL_ID     : your Meta Pixel ID from Events Manager.
+     OFFER_ACTIVE : true  = show the free-month code
+                    false = plain download page, no code
+     ============================================================ */
+  var PIXEL_ID = "925265163591801";
+  var OFFER_ACTIVE = true;
+
+  if (!OFFER_ACTIVE) document.documentElement.classList.add("offer-off");
+</script>
+
+<!-- Meta Pixel -->
+<script>
+  if (PIXEL_ID && PIXEL_ID !== "YOUR_PIXEL_ID") {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', PIXEL_ID);
+    fbq('track', 'PageView');
+  }
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500&family=Fraunces:opsz,wght@9..144,600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
@@ -195,6 +223,12 @@
   html[lang="ar"] [data-ar] { display: revert; }
   html[lang="en"] [data-en] { display: revert; }
 
+  /* Offer switch: [data-offer] shows only while the offer is on,
+     [data-nooffer] shows only once it is switched off. */
+  [data-nooffer] { display: none; }
+  html.offer-off [data-offer] { display: none !important; }
+  html.offer-off [data-nooffer] { display: revert; }
+
   @media (min-width: 720px) {
     body { padding-top: 32px; }
     .stores { flex-direction: row; }
@@ -221,14 +255,18 @@
 </p>
 
 <section class="page" aria-labelledby="offer">
-  <h2 id="offer"><span data-ar>شهر مجاني</span><span data-en>One month free</span></h2>
-  <p class="who"><span data-ar>لأول ١٠٠ عائلة</span><span data-en>for the first 100 families</span></p>
+  <h2 id="offer">
+    <span data-offer><span data-ar>شهر مجاني</span><span data-en>One month free</span></span>
+    <span data-nooffer><span data-ar>حمّل التطبيق</span><span data-en>Get the app</span></span>
+  </h2>
+  <p class="who" data-offer><span data-ar>لفترة محدودة</span><span data-en>for a limited time</span></p>
+  <p class="who" data-nooffer><span data-ar>متوفر على آيفون وأندرويد</span><span data-en>On iPhone and Android</span></p>
 
-  <div class="code">
+  <div class="code" data-offer>
     <span id="code">DREAMTALE100</span>
     <button type="button" id="copy"><span data-ar>نسخ</span><span data-en>Copy</span></button>
   </div>
-  <p class="hint" id="hint">
+  <p class="hint" id="hint" data-offer>
     <span data-ar>اضغط زر متجرك، الرمز يُدخل تلقائياً</span>
     <span data-en>Tap your store — the code fills in for you</span>
   </p>
@@ -246,21 +284,25 @@
 </section>
 
 <p class="terms">
-  <span data-ar>بعد الشهر المجاني يتجدد الاشتراك بسعر ٦٫٩٩ دولار شهرياً، ويمكن إلغاؤه في أي وقت من إعدادات المتجر. الرمز صالح لمرة واحدة لكل حساب.</span>
-  <span data-en>After the free month the subscription renews at $6.99/month and can be cancelled any time in your store settings. One redemption per account.</span>
-  <br><a href="https://dreamtalestudio.github.io/privacy"><span data-ar>سياسة الخصوصية</span><span data-en>Privacy policy</span></a>
+  <span data-offer>
+    <span data-ar>بعد الشهر المجاني يتجدد الاشتراك بسعر ٦٫٩٩ دولار شهرياً، ويمكن إلغاؤه في أي وقت من إعدادات المتجر. الرمز صالح لمرة واحدة لكل حساب.</span>
+    <span data-en>After the free month the subscription renews at $6.99/month and can be cancelled any time in your store settings. One redemption per account.</span>
+    <br>
+  </span>
+  <a href="https://dreamtalestudio.github.io/privacy"><span data-ar>سياسة الخصوصية</span><span data-en>Privacy policy</span></a>
 </p>
 
 <script>
   (function () {
     var root = document.documentElement;
 
+    // --- Language -------------------------------------------------
     function setLang(l) {
       root.setAttribute("lang", l);
       root.setAttribute("dir", l === "ar" ? "rtl" : "ltr");
-      document.title = l === "ar"
-        ? "قصص الأحلام — شهر مجاني لأول ١٠٠ عائلة"
-        : "DreamTale — a free month for the first 100 families";
+      document.title = OFFER_ACTIVE
+        ? (l === "ar" ? "قصص الأحلام — شهر مجاني لفترة محدودة" : "DreamTale — one month free, for a limited time")
+        : (l === "ar" ? "قصص الأحلام — حكايات قبل النوم" : "DreamTale — bedtime stories starring your child");
       try { localStorage.setItem("dt-lang", l); } catch (e) {}
     }
 
@@ -273,25 +315,57 @@
       setLang(root.getAttribute("lang") === "ar" ? "en" : "ar");
     });
 
-    var ua = navigator.userAgent || "";
-    if (/iPhone|iPad|iPod/i.test(ua)) document.getElementById("android").classList.add("secondary");
-    if (/Android/i.test(ua)) document.getElementById("ios").classList.add("secondary");
+    // --- Store links ----------------------------------------------
+    var ios = document.getElementById("ios");
+    var android = document.getElementById("android");
 
-    document.getElementById("copy").addEventListener("click", function () {
-      var code = document.getElementById("code").textContent;
-      var hint = document.getElementById("hint");
-      var ar = root.getAttribute("lang") === "ar";
-      function say(a, e) { hint.textContent = ar ? a : e; }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(code).then(function () {
-          say("تم نسخ الرمز", "Code copied");
-        }, function () {
-          say("انسخ الرمز يدوياً: " + code, "Copy the code manually: " + code);
-        });
-      } else {
-        say("انسخ الرمز يدوياً: " + code, "Copy the code manually: " + code);
+    if (!OFFER_ACTIVE) {
+      ios.href = "https://apps.apple.com/app/id6781977705";
+      android.href = "https://play.google.com/store/apps/details?id=com.dreamtale.app";
+    }
+
+    var ua = navigator.userAgent || "";
+    if (/iPhone|iPad|iPod/i.test(ua)) android.classList.add("secondary");
+    if (/Android/i.test(ua)) ios.classList.add("secondary");
+
+    // --- Tracking: fire a Lead event, then go to the store ---------
+    // The short pause gives the pixel time to send before the page
+    // navigates away; without it the event is often lost.
+    function goToStore(platform, url) {
+      if (window.fbq) {
+        fbq("track", "Lead", { content_name: platform, offer: OFFER_ACTIVE ? "free_month" : "none" });
       }
+      setTimeout(function () { window.location.href = url; }, 300);
+    }
+
+    ios.addEventListener("click", function (e) {
+      e.preventDefault();
+      goToStore("ios", ios.href);
     });
+    android.addEventListener("click", function (e) {
+      e.preventDefault();
+      goToStore("android", android.href);
+    });
+
+    // --- Copy code --------------------------------------------------
+    var copyBtn = document.getElementById("copy");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", function () {
+        var code = document.getElementById("code").textContent;
+        var hint = document.getElementById("hint");
+        var ar = root.getAttribute("lang") === "ar";
+        function say(a, e) { hint.textContent = ar ? a : e; }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(function () {
+            say("تم نسخ الرمز", "Code copied");
+          }, function () {
+            say("انسخ الرمز يدوياً: " + code, "Copy the code manually: " + code);
+          });
+        } else {
+          say("انسخ الرمز يدوياً: " + code, "Copy the code manually: " + code);
+        }
+      });
+    }
   })();
 </script>
 </body>
