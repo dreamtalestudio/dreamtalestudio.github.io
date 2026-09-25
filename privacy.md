@@ -5,9 +5,9 @@ title: Privacy Policy
 
 # Privacy Policy for DreamTale
 
-**Last updated: April 13, 2026**
+**Last updated: September 25, 2026**
 
-DreamTale is a mobile application that generates personalized bedtime stories for children using artificial intelligence. This Privacy Policy explains what information the app handles and how.
+DreamTale is a mobile application that generates personalized bedtime stories for children using artificial intelligence. This Privacy Policy explains what information the app and our website handle, and how.
 
 DreamTale is operated by **Ramzy Jubrail Judeh Khalilieh**, trading as **DreamTale Studio**, based in Bethlehem, Palestine. In this policy, "we," "us," and "DreamTale" refer to DreamTale Studio.
 
@@ -15,9 +15,9 @@ If you have any questions about this policy, contact us at **dreamtalestudio1@gm
 
 ## Our approach to privacy
 
-DreamTale is built around a simple principle: **your stories should stay on your device.** The app has no user accounts, no cloud sync, no ads, and no analytics or tracking of any kind. We do not know who you are, and we do not want to.
+DreamTale is built around a simple principle: **your stories should stay on your device.** The app has no user accounts, no cloud sync, no ads, and no analytics or tracking of any kind inside the app. We do not know who you are, and we do not want to.
 
-This policy describes the small amount of information that must leave your device in order for the app to generate stories, narrate them, and illustrate them.
+This policy describes the small amount of information that must leave your device in order for the app to generate stories, narrate them, and illustrate them. It also describes the advertising measurement used on our promotional web page (see "Our website" below), which is separate from the app.
 
 ## Information stored on your device
 
@@ -42,15 +42,14 @@ To generate a story, illustration, or narration, the app temporarily sends the i
 
 **What is not sent:** your email, your real name, your device identifiers, your location, your contacts, photos from your device, or anything else outside of the specific request.
 
-We do not store any of this information on our servers. Requests are passed through in real time, and temporary server logs used for debugging are automatically rotated and deleted.
+We do not store story text or child profile information on our servers. Requests are passed through in real time. Generated illustration images are held temporarily on our server so the app can download and display them; they are not linked to any identity and are deleted when the server restarts. Temporary server logs used for debugging are automatically rotated and deleted.
 
 ## Third-party AI services
 
 DreamTale uses the following third-party services to power its features. Each processes only the specific request content described above and is subject to its own privacy policy:
 
-- **OpenAI** (story text generation) — [openai.com/privacy](https://openai.com/privacy)
+- **OpenAI** (story text generation and narration) — [openai.com/privacy](https://openai.com/privacy)
 - **SiliconFlow** (AI illustration generation) — [siliconflow.com](https://siliconflow.com)
-- **Google Cloud Text-to-Speech** (narration) — [cloud.google.com/terms/cloud-privacy-notice](https://cloud.google.com/terms/cloud-privacy-notice)
 
 These services may temporarily retain API request data for abuse monitoring purposes according to their own policies. We encourage you to avoid entering real last names, addresses, or other sensitive personal information into story prompts.
 
@@ -64,15 +63,23 @@ If you are a parent or guardian and believe your child has entered information i
 
 ## Payments and subscriptions
 
-DreamTale offers an optional premium subscription. All payments are processed by **Google Play Billing**. We never see or handle your payment card details. Google Play manages billing, refunds, and subscription status. Please refer to [Google Play's Privacy Policy](https://policies.google.com/privacy) for information about how Google handles payment data.
+DreamTale offers an optional premium subscription. All payments are processed by **Google Play Billing** on Android and by the **Apple App Store** on iOS. We never see or handle your payment card details. Google and Apple manage billing, refunds, and subscription status. Please refer to [Google's Privacy Policy](https://policies.google.com/privacy) and [Apple's Privacy Policy](https://www.apple.com/legal/privacy/) for information about how they handle payment data.
 
-Our subscription management provider, **RevenueCat**, receives an anonymous purchase identifier from Google Play to verify your subscription status. It does not receive your name, email, or payment details. RevenueCat's privacy policy is available at [revenuecat.com/privacy](https://www.revenuecat.com/privacy).
+Our subscription management provider, **RevenueCat**, receives an anonymous purchase identifier from Google Play or the App Store to verify your subscription status. It does not receive your name, email, or payment details. RevenueCat's privacy policy is available at [revenuecat.com/privacy](https://www.revenuecat.com/privacy).
+
+## Our website (Meta Pixel)
+
+Our promotional page at **dreamtalestudio.github.io/free** uses the **Meta Pixel**, a measurement tool provided by Meta Platforms, Inc. It records when you visit that page and when you tap an App Store or Google Play download button, so we can measure how well our advertising performs.
+
+When you visit that page, Meta may use cookies and receive information such as your IP address, browser type, and the pages you view, and may link it to your Facebook or Instagram account if you are logged in. We do not collect your name, email, or any information about your child through this page.
+
+The Meta Pixel is used only on that web page. It is **not** used inside the DreamTale app. You can control how Meta uses this information for ads in your Facebook or Instagram ad settings. For details, see [Meta's Privacy Policy](https://www.facebook.com/privacy/policy).
 
 ## Your rights
 
 Because DreamTale does not maintain user accounts or store personal data on our servers, there is no account to access or delete on our end. You retain full control of all data stored on your device.
 
-If you are located in the European Economic Area, United Kingdom, California, or any other jurisdiction that grants you specific privacy rights (including the right to access, correct, or delete personal data), those rights apply regardless of where we operate. To exercise any such rights concerning data that may have been processed by our third-party AI services, contact us at dreamtalestudio1@gmail.com and we will assist you.
+If you are located in the European Economic Area, United Kingdom, California, or any other jurisdiction that grants you specific privacy rights (including the right to access, correct, or delete personal data), those rights apply regardless of where we operate. To exercise any such rights concerning data that may have been processed by our third-party services, contact us at dreamtalestudio1@gmail.com and we will assist you.
 
 ## Security
 
@@ -80,7 +87,7 @@ Data transmitted between the app and our servers is protected using industry-sta
 
 ## Changes to this policy
 
-We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top. Significant changes will be communicated through the app or via the app's Google Play listing.
+We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top. Significant changes will be communicated through the app or via the app's store listings.
 
 ## Contact
 
