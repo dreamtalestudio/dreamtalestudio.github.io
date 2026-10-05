@@ -5,7 +5,7 @@ title: Privacy Policy
 
 # Privacy Policy for DreamTale
 
-**Last updated: September 25, 2026**
+**Last updated: October 5, 2026**
 
 DreamTale is a mobile application that generates personalized bedtime stories for children using artificial intelligence. This Privacy Policy explains what information the app and our website handle, and how.
 
@@ -24,8 +24,9 @@ This policy describes the small amount of information that must leave your devic
 The following information stays on your device only and is never transmitted to us:
 
 - The stories you create and save
-- Child profiles you create (name, age, appearance details such as hair color, eye color, skin tone)
-- Your app preferences (language, autosave, autoplay)
+- Child profiles you create (name, age, gender, clothes color, and appearance details such as hair color, eye color, skin tone)
+- Character pictures of your child (the drawn, storybook-style pictures described in "Photos of your child" below)
+- Your app preferences (language, picture style, text size, autosave, autoplay)
 - Your story history and favorites
 
 This data is stored locally using your device's standard storage. You can delete all of it at any time from the Settings screen ("Delete All Data"). Uninstalling the app also removes it.
@@ -37,27 +38,39 @@ To generate a story, illustration, or narration, the app temporarily sends the i
 **What is sent:**
 
 - **For story generation:** the child's first name, age, gender, appearance description, and the story theme you selected.
-- **For illustrations:** a text description of the scene, which may include the child's first name and appearance description.
+- **For illustrations:** a text description of the scene, which may include the child's first name and appearance description, the picture style you chose, and, if your child has character pictures, those drawn pictures, so your child looks the same on every page.
+- **For character pictures:** the child's first name, age, gender, clothes color and appearance description, or, only if you choose to, one photo of your child (see "Photos of your child" below).
 - **For narration:** the text of the story page you chose to hear read aloud.
 
-**What is not sent:** your email, your real name, your device identifiers, your location, your contacts, photos from your device, or anything else outside of the specific request.
+**What is not sent:** your email, your real name, your device identifiers, your location, your contacts, any photo you did not choose yourself, or anything else outside of the specific request.
 
-We do not store story text or child profile information on our servers. Requests are passed through in real time. Generated illustration images are held temporarily on our server so the app can download and display them; they are not linked to any identity and are deleted when the server restarts. Temporary server logs used for debugging are automatically rotated and deleted.
+We do not store story text, child profile information, photos or character pictures on our servers. Requests are passed through in real time. Generated illustration images are held briefly on our server so the app can download and display them; they are not linked to any identity and are automatically deleted, usually within one hour. Temporary server logs used for debugging are automatically rotated and deleted, and never contain photos.
+
+## Photos of your child (optional)
+
+You can describe your child's appearance, or, if you prefer, use one photo of your child so that the illustrations look more like them. Using a photo is entirely optional, and the app asks for your consent before the first photo is used.
+
+- **You choose the photo.** The app opens your camera or your photo library only when you tap to add a photo, and uses only the one photo you pick. It does not read any other photos.
+- **How it is used.** The photo is sent once, over an encrypted connection, through our server to our picture partner **Runware**, which draws a storybook-style character picture of your child from it. The app then shows you that picture and asks whether it looks like your child.
+- **What we keep.** Nothing. Our server does not save the photo or write it to its logs; it only passes it on. The photo is not used for anything else, and it is never used to identify your child.
+- **What stays on your phone.** Only the drawn character pictures (one per picture style) are saved, on your device. They are sent with your illustration requests so your child looks the same on every page, and are not kept on our server afterwards.
+- **Deleting.** You can delete your child's character pictures at any time from the child's profile ("Delete pictures"), by deleting the profile, with "Delete All Data" in Settings, or by uninstalling the app.
 
 ## Third-party AI services
 
 DreamTale uses the following third-party services to power its features. Each processes only the specific request content described above and is subject to its own privacy policy:
 
 - **OpenAI** (story text generation and narration) — [openai.com/privacy](https://openai.com/privacy)
-- **SiliconFlow** (AI illustration generation) — [siliconflow.com](https://siliconflow.com)
+- **Runware** (illustrations and character pictures, including the optional photo of your child) — [runware.ai/privacy](https://runware.ai/privacy)
+- **DeepInfra** (backup illustration service, used only if Runware is unavailable; it receives scene descriptions only, never photos or character pictures) — [deepinfra.com/privacy](https://deepinfra.com/privacy)
 
-These services may temporarily retain API request data for abuse monitoring purposes according to their own policies. We encourage you to avoid entering real last names, addresses, or other sensitive personal information into story prompts.
+These services may temporarily retain API request data according to their own policies, for example for abuse monitoring. We encourage you to avoid entering real last names, addresses, or other sensitive personal information into story prompts.
 
 ## Children's privacy
 
 DreamTale is designed to be used by **parents or guardians** who generate bedtime stories for their children. The app is classified as "Mixed Audience" under Google Play's target audience policy.
 
-We do not knowingly collect personal information from children. Child profiles created inside the app (name, age, appearance) are stored only on the device and are never transmitted to us. The small amount of data sent to AI services for story generation is limited to what is needed to personalize the story and is not used to identify or profile the child.
+We do not knowingly collect personal information from children. Child profiles created inside the app (name, age, appearance, character pictures) are stored only on the device and are never stored by us. A photo of a child is only ever used if a parent chooses to add one and agrees to the consent screen, and it is used only to draw the child's character picture, as described in "Photos of your child". The small amount of data sent to AI services for story generation is limited to what is needed to personalize the story and is not used to identify or profile the child.
 
 If you are a parent or guardian and believe your child has entered information into the app that you would like removed, you can delete it at any time using the "Delete All Data" option in Settings, or by uninstalling the app.
 
