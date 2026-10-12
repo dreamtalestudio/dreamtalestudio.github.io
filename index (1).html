@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>قصص الأحلام | DreamTale</title>
+<meta name="description" content="حمّلي تطبيق قصص الأحلام: قصة جديدة كل ليلة، طفلك بطلها.">
+<meta property="og:title" content="قصص الأحلام | DreamTale">
+<meta property="og:description" content="قصة جديدة كل ليلة، طفلك بطلها 🌙">
+<script>
+  // Sends each phone straight to its own store. Anything else sees the buttons below.
+  (function () {
+    var IOS = "https://apps.apple.com/app/id6781977705";
+    var ANDROID = "https://play.google.com/store/apps/details?id=com.dreamtale.app";
+    var ua = navigator.userAgent || "";
+    var isIOS = /iPhone|iPad|iPod/i.test(ua) ||
+                (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var isAndroid = /Android/i.test(ua);
+    if (isIOS) { window.location.replace(IOS); }
+    else if (isAndroid) { window.location.replace(ANDROID); }
+  })();
+</script>
+<style>
+  :root { --navy:#14163f; --indigo:#2a2d6e; --gold:#f6d68c; --cream:#fff8eb; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(circle at 50% 20%, var(--indigo), var(--navy) 70%);
+    color: var(--cream); font-family: "Segoe UI", Tahoma, Arial, sans-serif; text-align: center; padding: 24px 16px;
+  }
+  .card { max-width: 420px; width: 100%; }
+  .moon { font-size: 64px; line-height: 1; }
+  h1 { color: var(--gold); font-size: 40px; margin: 12px 0 4px; }
+  .en { font-size: 18px; opacity: .85; margin: 0 0 16px; letter-spacing: .5px; }
+  p { font-size: 18px; line-height: 1.6; margin: 0 0 28px; }
+  a.btn {
+    display: block; margin: 12px auto; padding: 16px; border-radius: 999px; max-width: 320px;
+    background: var(--gold); color: var(--navy); font-weight: 700; font-size: 18px; text-decoration: none;
+  }
+  a.btn.alt { background: transparent; color: var(--gold); border: 2px solid var(--gold); }
+  small { display: block; margin-top: 24px; opacity: .6; font-size: 13px; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="moon" aria-hidden="true">🌙</div>
+    <h1>قصص الأحلام</h1>
+    <div class="en">DreamTale</div>
+    <p>قصة جديدة كل ليلة… وطفلك بطلها</p>
+    <a class="btn" href="https://apps.apple.com/app/id6781977705">تحميل لأجهزة iPhone</a>
+    <a class="btn alt" href="https://play.google.com/store/apps/details?id=com.dreamtale.app">تحميل لأجهزة Android</a>
+    <small>إذا لم يُفتح المتجر تلقائيًا، اضغطي على الزر المناسب لهاتفك.</small>
+  </main>
+</body>
+</html>
